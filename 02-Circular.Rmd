@@ -27,7 +27,7 @@ library("circular")
 
 ```{r}
 
-actividad<-read.table("./Data (Circular)/activity.txt", header= T)
+actividad<-read.table("./data/activity.txt", header= T)
 
 radian <- actividad$Time_2*2*pi
 
@@ -72,7 +72,7 @@ library("plotrix")
 
 ```{r}
 
-actividad_table<-read.table("./Data (Circular)/records_hour.txt", header= T)
+actividad_table<-read.table("./data/records_hour.txt", header= T)
 
 
 ```
