@@ -388,10 +388,10 @@ $(document).ready(function () {
 <p><strong>Animal activity</strong> is a central issue on ecology, as it determines the outcome of ecological interactions, influeces community structure and also explains many auto-ecological processes. Ecological studies on animal activity rely on information sources such as telemetry (VHF, GPS or NFC among others) or camera traps. In the recent years, camera traps have been widely used in wildlife ecology studies as they provide high-quality data (if properly used, of course) with minimum observer interference, and are a cost-effective method to monitor large areas with little time investment.</p>
 <p>Processing activity data, however, can be bothersome and even frustrating without a prior knowledge about how to deal with this kind of data. By definition, activity data is circular (i.e., measured in time o angular units) and therefore cannot be analyzed using standard statistical procedures such as <code>anova</code> or <code>glm</code> that assume linear data. For example, in circular data the time difference between 1:15 and 1:45 h is the same than 23:55 and 0:25 h, but if we operate these differences as linear data the results would be quite different. In circular data the beginning and the end points are the same and thus we need a special framework to analyze these patterns.</p>
 <p>Here we present a short guide on animal activity analysis based on <a href="https://cran.r-project.org/">R</a> plus <a href="https://www.rstudio.com/">RStudio</a> open source platform. The whole tutorial is hosted on our lab repository at <a href="https://github.com/fonturbel-lab">GitHub</a> and it will be continously updated by our lab members and collaborators.</p>
+<div id="contents" class="section level3">
+<h3>Contents</h3>
+<p>We start our ‘self-service’ tutorial with <strong>Circular statistics</strong> to analyze activity patterns around the clock. Then, we go with the <strong>Activity kernels</strong> that are a graphic approach to characterize activity functions. And once we mastered kernel functions, we can assess <strong>Overlap</strong> between two activity kernels and formally test hypotheses about them.</p>
 </div>
-<div id="contents" class="section level2">
-<h2>Contents</h2>
-<p>We start our ‘self-service’ tutorial with <strong>Circular statistics</strong> to analyze activity patterns around the clock. Then, we discuss</p>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>
