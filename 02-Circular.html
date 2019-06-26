@@ -517,11 +517,29 @@ clock24.plot(activ_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.l
 </div>
 <div id="formal-tests" class="section level2">
 <h2>Formal tests</h2>
-<p>Now that we have made such beautiful rose diagrams and frequency plots, we maybe will be interested into test some hypotheses about activity patterns. The most simple question here will be if animal activity is homogeneous or not along the day. Of course our <em>null hypothesis</em> will be that animal activity is uniform along the day (like a faculty researcher, for example). The <code>circular</code> package has two common tests to do that: Rao’s test fpr homogeneity of angular data (<code>rao.test</code> function), and Rayleight test of Unifortmity (<code>rayleigh.test</code> function). Let’s see how they work:</p>
+<p>Now that we have made such beautiful rose diagrams and frequency plots, we maybe will be interested into test some hypotheses about activity patterns. The most simple question here will be if animal activity is homogeneous or not along the day. Of course our <em>null hypothesis</em> will be that animal activity is uniform along the day (like a faculty researcher, for example). The <code>circular</code> package has two common tests to do that: Rao’s test fpr homogeneity of angular data (<code>rao.test</code> function), and Rayleight test of Unifortmity (<code>rayleigh.test</code> function). Both tests do basically the same, the difference is that Rayleigh test needs only one <code>circular.class</code> element whereas Rao’s test need two samples to be compared.</p>
+<p>Let’s see how they work:</p>
 <pre class="r"><code>#Rao's test
-#rao.test(n_a)
+x &lt;- rvonmises(100, circular(0), kappa=10)
+y &lt;- rvonmises(100, circular(0), kappa=10)
 
-#Rayleigh's test
+rao.test(x, y)</code></pre>
+<pre><code>## 
+## Rao's Tests for Homogeneity 
+## 
+##        Test for Equality of Polar Vectors: 
+##  
+## Test Statistic = 0.0241 
+## Degrees of Freedom = 1 
+## P-value of test = 0.8767 
+##  
+##        Test for Equality of Dispersions: 
+##  
+## Test Statistic = 0.0283 
+## Degrees of Freedom = 1 
+## P-value of test = 0.8665 
+## </code></pre>
+<pre class="r"><code>#Rayleigh's test
 rayleigh.test(n_a)</code></pre>
 <pre><code>## 
 ##        Rayleigh Test of Uniformity 
