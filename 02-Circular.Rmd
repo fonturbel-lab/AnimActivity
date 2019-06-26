@@ -14,20 +14,32 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-## Package Circular
+# Animal activity analysis
 
-```{r}
+## 02 - Circular statistics
 
+**Circular statistics** are an analytic approach to deal with time data. Here we will use the `circular` package to deal with animal activity data, and the `plotrix` package to produce some plots.
+
+```{r data_packages, echo=TRUE}
+#Loading the libraries needed to work with circular data and do plots
 library("circular")
+library("plotrix")
 
+#Loading an example dataset
+actividad<-read.table("./data/activity.txt", header= T)
 ```
 
 
-# transform data (time) to radian
+### Data (time) transformation to radians
 
-```{r}
+A given time, say 15:26 h in a 24h clock can be also expressed as a radian in a circle. Therefore, before start analyzing activity data we should transform time data to radians using the following formula:
 
-actividad<-read.table("./data/activity.txt", header= T)
+$$
+rad=time*2*{\pi}
+$$
+**Important:** Prior to transform time data to radians you must convert your time figures to a number.
+
+```{r radian, echo=TRUE}
 
 radian <- actividad$Time_2*2*pi
 
@@ -63,7 +75,7 @@ rose.diag(n_a, bin = 24, col = "lightblue", main = "A",
 
 ```{r}
 
-library("plotrix")
+
 
 ```
 
@@ -93,3 +105,9 @@ clock24.plot(actividad_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.gr
 
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Session
+
+```{r session, echo=TRUE}
+sessionInfo()
+```
