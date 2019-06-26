@@ -78,8 +78,6 @@ actividad_table<-read.table("./data/records_hour.txt", header= T)
 #Making the plot
 clock<-c(0:23) 
 clock24.plot(actividad_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.labels = 3,  show.grid=T, grid.bg="white", grid.left=T,grid.col="black",rad.col="black", rp.type="r",lwd=10,line.col="blue",lty=1, main="",add=F)
-
-
 ```
 
 
