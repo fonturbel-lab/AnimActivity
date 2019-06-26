@@ -12,22 +12,84 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Package Circular
 
-```{r cars}
-summary(cars)
+```{r}
+
+library("circular")
+
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
+# transform data (time) to radian
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+
+actividad<-read.table("./Data (Circular)/activity.txt", header= T)
+
+radian <- actividad$Time_2*2*pi
+
+data <- radian[actividad$Condition == "A"]
+
 ```
+
+
+
+
+# make our data(Radian) into circular class from package circular
+
+```{r}
+
+as.circular(data)
+
+n_a <- circular(data%%24, 
+                     units="radians", template="clock24")
+
+```
+
+# plot a rose diagram with circular data set
+
+```{r}
+
+rose.diag(n_a, bin = 24, col = "lightblue", main = "A", 
+          prop = 2)
+
+```
+
+
+## Package plotrix 
+
+```{r}
+
+library("plotrix")
+
+```
+
+
+# use table with frequency of records per hour#
+
+```{r}
+
+actividad_table<-read.table("./Data (Circular)/records_hour.txt", header= T)
+
+
+```
+
+# ‘clock24.plot’ displays a plot of radial lines
+
+```{r}
+
+clock<-c(0:23) 
+clock24.plot(actividad_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.labels = 3,  show.grid=T, grid.bg="white", grid.left=T,grid.col="black",rad.col="black", rp.type="r",lwd=10,line.col="blue",lty=1, main="",add=F)
+
+
+```
+
+
+
+
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
