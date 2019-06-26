@@ -26,7 +26,7 @@ library("circular")
 library("plotrix")
 
 #Loading an example dataset
-actividad<-read.table("./data/activity.txt", header= T)
+activ<-read.table("./data/activity.txt", header= T)
 ```
 
 
@@ -40,8 +40,8 @@ $$
 **Important:** Prior to transform time data to radians you must convert your time figures to a number.
 
 ```{r radian, echo=TRUE}
-radian <- actividad$Time_2*2*pi
-data <- radian[actividad$Condition == "A"]
+radian <- activ$Time_2*2*pi
+data <- radian[activ$Condition == "A"]
 ```
 
 Then, we have to convert our radian data into a `circular class` object in order to be used with the `circular` package.
@@ -73,11 +73,11 @@ Then, we will use the `clock24.plot` function of the `plotrix` package.
 
 ```{r freq_plot, echo=TRUE, eval=TRUE, fig.width=8}
 #Loading new data file
-actividad_table<-read.table("./data/records_hour.txt", header= T)
+activ_table<-read.table("./data/records_hour.txt", header= T)
 
 #Making the plot
 clock<-c(0:23) 
-clock24.plot(actividad_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.labels = 3,  show.grid=T, grid.bg="white", grid.left=T,grid.col="black",rad.col="black", rp.type="r",lwd=10,line.col="blue",lty=1, main="",add=F)
+clock24.plot(activ_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.labels = 3,  show.grid=T, grid.bg="white", grid.left=T,grid.col="black",rad.col="black", rp.type="r",lwd=10,line.col="blue",lty=1, main="",add=F)
 ```
 
 
