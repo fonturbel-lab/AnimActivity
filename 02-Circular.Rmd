@@ -1,5 +1,5 @@
 ---
-title: "02 - Circular statistics"
+title: "Animal activity analysis"
 author: "Francisco E. Fonturbel and Javier Cuadra"
 date: "26/jun/2019"
 output: 
@@ -12,11 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
-# Animal activity analysis
-
-## 02 - Circular statistics
+# 02 - Circular statistics
 
 **Circular statistics** are an analytic approach to deal with time data. Here we will use the `circular` package to deal with animal activity data, and the `plotrix` package to produce some plots.
 

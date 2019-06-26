@@ -1,5 +1,5 @@
 ---
-title: "01 - Introduction"
+title: "Animal activity analysis"
 author: "Francisco E. Fonturbel and Javier Cuadra"
 date: "26/jun/2019"
 output: 
@@ -12,9 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Animal activity analysis
-
-## 01 - Introduction
+# 01 - Introduction
 
 **Animal activity** is a central issue on ecology, as it determines the outcome of ecological interactions, influeces community structure and also explains many auto-ecological processes. Ecological studies on animal activity rely on information sources such as telemetry (VHF, GPS or NFC among others) or camera traps. In the recent years, camera traps have been widely used in wildlife ecology studies as they provide high-quality data (if properly used, of course) with minimum observer interference, and are a cost-effective method to monitor large areas with little time investment.
 
