@@ -63,41 +63,25 @@ rose.diag(n_a, bin = 24, col = "lightblue", main = "Rose diagram",
           prop = 2)
 ```
 
+## Frequency plots
 
-## Package plotrix 
+A more elaborated representation of activity periods than the rose diagram is the frequency plot. On a frequency plot, the lenght of each bar is proportional to .
 
-```{r}
+To make a decent frequency plot we njeed to arrange our data in a table with frequency of records per hour. We'll load a new file (ready to go) as example.
 
+Then, we will use the `clock24.plot` function of the `plotrix` package.
 
-
-```
-
-
-# use table with frequency of records per hour#
-
-```{r}
-
+```{r freq_plot, echo=TRUE, eval=TRUE, fig.width=8}
+#Loading new data file
 actividad_table<-read.table("./data/records_hour.txt", header= T)
 
-
-```
-
-# ‘clock24.plot’ displays a plot of radial lines
-
-```{r}
-
+#Making the plot
 clock<-c(0:23) 
 clock24.plot(actividad_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.labels = 3,  show.grid=T, grid.bg="white", grid.left=T,grid.col="black",rad.col="black", rp.type="r",lwd=10,line.col="blue",lty=1, main="",add=F)
 
 
 ```
 
-
-
-
-
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 ## Session
 
