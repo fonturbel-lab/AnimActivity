@@ -80,6 +80,17 @@ clock<-c(0:23)
 clock24.plot(activ_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.labels = 3,  show.grid=T, grid.bg="white", grid.left=T,grid.col="black",rad.col="black", rp.type="r",lwd=10,line.col="blue",lty=1, main="",add=F)
 ```
 
+## Formal tests
+
+Now that we have made such beautiful rose diagrams and frequency plots, we maybe will be interested into test some hypotheses about activity patterns. The most simple question here will be if animal activity is homogeneous or not along the day. Of course our _null hypothesis_ will be that animal activity is uniform along the day (like a faculty researcher, for example). The `circular` package has two common tests to do that: Rao's test fpr homogeneity of angular data (`rao.test` function), and Rayleight test of Unifortmity (`rayleigh.test` function). Let's see how they work:
+
+```{r rr_tests, echo=TRUE, eval=TRUE, fig.width=8}
+#Rao's test
+#rao.test(n_a)
+
+#Rayleigh's test
+rayleigh.test(n_a)
+```
 
 ## Session
 
