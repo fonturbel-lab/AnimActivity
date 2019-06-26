@@ -1,7 +1,7 @@
 ---
 title: "02 - Circular statistics"
 author: "Francisco E. Fonturbel and Javier Cuadra"
-date: "6/26/2019"
+date: "26/jun/2019"
 output: 
   html_document:
     includes:
@@ -40,34 +40,27 @@ $$
 **Important:** Prior to transform time data to radians you must convert your time figures to a number.
 
 ```{r radian, echo=TRUE}
-
 radian <- actividad$Time_2*2*pi
-
 data <- radian[actividad$Condition == "A"]
-
 ```
 
+Then, we have to convert our radian data into a `circular class` object in order to be used with the `circular` package.
 
-
-
-# make our data(Radian) into circular class from package circular
-
-```{r}
+```{r circ_class, echo=TRUE, warning=FALSE}
 
 as.circular(data)
-
 n_a <- circular(data%%24, 
                      units="radians", template="clock24")
 
 ```
 
-# plot a rose diagram with circular data set
+## Rose diagrams
 
-```{r}
+A simple representation of activity data is the rose diagram, which is obtained using the function `rose.diag` to represent a circular dataset into a 24h clock.
 
-rose.diag(n_a, bin = 24, col = "lightblue", main = "A", 
+```{r rose_diag, echo=TRUE, eval=TRUE, fig.width=8}
+rose.diag(n_a, bin = 24, col = "lightblue", main = "Rose diagram", 
           prop = 2)
-
 ```
 
 
