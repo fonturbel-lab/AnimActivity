@@ -1,5 +1,5 @@
 ---
-title: "02 - Circular statistics"
+title: "03 - Kernel (Density Plots)"
 author: "Francisco E. Fonturbel and Javier Cuadra"
 date: "6/26/2019"
 output: 
@@ -13,80 +13,67 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+# Kernel Density Plots
 
-## Package Circular
+## Kenrnel density plots are effective way to view distribution of variable (time). Can be considered as plots of smoothed histograms
 
-```{r}
 
-library("circular")
-
+```{r library, echo=FALSE}
+library ("overlap")
+library ("activity")
 ```
 
-
-# transform data (time) to radian
-
-```{r}
-
-actividad<-read.table("./data/activity.txt", header= T)
-
-radian <- actividad$Time_2*2*pi
-
-data <- radian[actividad$Condition == "A"]
-
-```
-
-
-
-
-# make our data(Radian) into circular class from package circular
+## load data (time)
 
 ```{r}
 
-as.circular(data)
+act_x<-read.table("./Data/act_x.txt", header= T)
 
-n_a <- circular(data%%24, 
-                     units="radians", template="clock24")
-
-```
-
-# plot a rose diagram with circular data set
-
-```{r}
-
-rose.diag(n_a, bin = 24, col = "lightblue", main = "A", 
-          prop = 2)
-
-```
-
-
-## Package plotrix 
-
-```{r}
-
-library("plotrix")
-
-```
-
-
-# use table with frequency of records per hour#
-
-```{r}
-
-actividad_table<-read.table("./data/records_hour.txt", header= T)
+act_y<-read.table("./Data/act_y.txt", header= T)
 
 
 ```
 
-# ‘clock24.plot’ displays a plot of radial lines
+## transform data (time) to radian
 
 ```{r}
 
-clock<-c(0:23) 
-clock24.plot(actividad_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.labels = 3,  show.grid=T, grid.bg="white", grid.left=T,grid.col="black",rad.col="black", rp.type="r",lwd=10,line.col="blue",lty=1, main="",add=F)
-
+rad_x<-act_x$Time_2*2*pi
+rad_y<-act_y$Time_2*2*pi
 
 ```
 
+## fitted data y extraction for condition 
+
+
+
+```{r}
+fitact_a <-fitact(rad_x[act_x$Condition=="A"])
+fitact_b <-fitact(rad_y[act_Y$Condition=="B"])
+```
+
+# Density Plot
+
+
+```{r}
+plot(fitact_a, yunit="dens", las=1, dline=list(col="lightblue"), tline=list(col="blue"), ylim=c(0,0.17))
+
+```
+
+```{r}
+plot(fitact_b, yunit="dens", las=1, dline=list(col="pink"), tline=list(col="red"))
+     
+```
+
+
+## plot two graphs in same plot
+
+```{r}
+plot(fitact_a, yunit="dens", las=1, dline=list(col="lightblue"), tline=list(col="blue"), ylim=c(0,0.17))
+     plot(fitact_a, yunit="dens", add=TRUE, dline=list(col="pink"), tline=list(col="red"))
+     legend("topright", inset = c(0,0), title = "Periodo", c("A", "B"), lty= c(1,3), col = c("lightblue", "pink"), bty = "n")
+
+```
 
 
 
