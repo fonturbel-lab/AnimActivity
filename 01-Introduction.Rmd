@@ -1,6 +1,6 @@
 ---
 title: "01 - Introduction"
-author: "Francisco E. Fonturbel"
+author: "Francisco E. Fonturbel and Javier Cuadra"
 date: "6/23/2019"
 output: 
   html_document:
@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 01 - Introduction
 
-*Animal activity* is a central issue on ecology, as it determines the outcome of ecological interactions, influeces community structure and also explains many auto-ecological processes.
+**Animal activity** is a central issue on ecology, as it determines the outcome of ecological interactions, influeces community structure and also explains many auto-ecological processes.
 
 ```{r empty}
 
