@@ -63,7 +63,7 @@ rose.diag(n_a, bin = 24, col = "lightblue", main = "Rose diagram",
 
 A more elaborated representation of activity periods than the rose diagram is the frequency plot. On a frequency plot, the lenght of each bar is proportional to .
 
-To make a decent frequency plot we njeed to arrange our data in a table with frequency of records per hour. We'll load a new file (ready to go) as example.
+To make a decent frequency plot we need to arrange our data in a table with frequency of records per hour. We'll load a new file (ready to go) as example.
 
 Then, we will use the `clock24.plot` function of the `plotrix` package.
 
@@ -73,8 +73,20 @@ activ_table<-read.table("./data/records_hour.txt", header= T)
 
 #Making the plot
 clock<-c(0:23) 
-clock24.plot(activ_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.labels = 3,  show.grid=T, grid.bg="white", grid.left=T,grid.col="black",rad.col="black", rp.type="r",lwd=10,line.col="blue",lty=1, main="",add=F)
+clock24.plot(activ_table$A,clock, minutes=T, label.prop=c(1.15,1.15),show.grid.labels = 3,  show.grid=T, grid.bg="white", grid.left=T,grid.col="black",rad.col="black", rp.type="r",lwd=5,line.col="blue",lty=1, main="",add=F)
 ```
+
+Another way to represent the frequency plot is with the magnitudes represented by the positions of the vertices of the polygon. In this plot, the positions of the vertices indicate the frequency of the records.
+
+```{r freq_plot2, echo=TRUE, eval=TRUE, fig.width=8}
+
+#Making the plot
+clock24.plot(activ_table$A,clock,minutes=T,label.prop=c(1.15,1.15),show.grid.labels = 3, rp.type="s",point.symbols=16,point.col="#0000FF99",add=F)
+clock24.plot(activ_table$A,clock, rp.type="p",poly.col="#0000FF99",lwd=4,line.col="#0000FF99",lty=1, main="",add=T) 
+
+
+```
+
 
 ## Formal tests
 
