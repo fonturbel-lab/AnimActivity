@@ -81,6 +81,8 @@ Another way to represent the frequency plot is with the magnitudes represented b
 ```{r freq_plot2, echo=TRUE, eval=TRUE, fig.width=8}
 
 #Making the plot
+clock<-c(0:23) 
+mi.azul <- rgb(0, 0, 1, 0.6) # "#0000FF99"
 clock24.plot(activ_table$A,clock,minutes=T,label.prop=c(1.15,1.15),show.grid.labels = 3, rp.type="s",point.symbols=16,point.col="#0000FF99",add=F)
 clock24.plot(activ_table$A,clock, rp.type="p",poly.col="#0000FF99",lwd=4,line.col="#0000FF99",lty=1, main="",add=T) 
 
