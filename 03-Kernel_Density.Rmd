@@ -14,6 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 03 - Kernel Density Plots
 
+[![DOI](https://zenodo.org/badge/193365640.svg)](https://zenodo.org/badge/latestdoi/193365640)
+
 Kernel density plots are effective way to visualize the distribution of variable (in this case, time). Thus, kernel plots can be considered as plots of smoothed histograms.
 
 Here we'll work with two `R` packages: `activity` and `overlap`. We also will load two sample time datasets along with the packages to perform the activty test.

@@ -14,6 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 02 - Circular statistics
 
+[![DOI](https://zenodo.org/badge/193365640.svg)](https://zenodo.org/badge/latestdoi/193365640)
+
 **Circular statistics** are an analytic approach to deal with time data. Here we will use the `circular` package to deal with animal activity data, and the `plotrix` package to produce some plots.
 
 ```{r data_packages, echo=TRUE}

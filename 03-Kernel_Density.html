@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Francisco E. Fonturbel and Javier Cuadra" />
@@ -343,18 +344,6 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -383,6 +372,7 @@ $(document).ready(function () {
 
 <div id="kernel-density-plots" class="section level1">
 <h1>03 - Kernel Density Plots</h1>
+<p><a href="https://zenodo.org/badge/latestdoi/193365640"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICAgd2lkdGg9IjE4NiIgaGVpZ2h0PSIyMCI+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJiIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiYmIiIHN0b3Atb3BhY2l0eT0iLjEiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgICA8bWFzayBpZD0iYSIgd2lkdGg9IjE4NiIgaGVpZ2h0PSIyMCI+CiAgICAgICAgICAgIDxyZWN0IHdpZHRoPSIxODYiIGhlaWdodD0iMjAiIHJ4PSIzIgogICAgICAgICAgICBmaWxsPSIjZmZmIi8+CiAgICAgICAgPC9tYXNrPgogICAgICAgIDxnIG1hc2s9InVybCgjYSkiPgogICAgICAgICAgICA8cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDMxdjIwSDB6IiAvPgogICAgICAgICAgICA8cGF0aCBmaWxsPSIjMDA3ZWM2IgogICAgICAgICAgICBkPSJNMzEgMGgxNTV2MjBIMzF6IgogICAgICAgICAgICAvPgogICAgICAgICAgICA8cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDE4NnYyMEgweiIgLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLAogICAgICAgIFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPgogICAgICAgICAgICA8dGV4dCB4PSIxNiIgeT0iMTUiIGZpbGw9IiMwMTAxMDEiCiAgICAgICAgICAgIGZpbGwtb3BhY2l0eT0iLjMiPgogICAgICAgICAgICAgICAgRE9JCiAgICAgICAgICAgIDwvdGV4dD4KICAgICAgICAgICAgPHRleHQgeD0iMTYiIHk9IjE0Ij4KICAgICAgICAgICAgICAgIERPSQogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgIDx0ZXh0IHg9IjEwOCIKICAgICAgICAgICAgeT0iMTUiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiPgogICAgICAgICAgICAgICAgMTAuNTI4MS96ZW5vZG8uMzM0NTIzMQogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgIDx0ZXh0IHg9IjEwOCIgeT0iMTQiPgogICAgICAgICAgICAgICAgMTAuNTI4MS96ZW5vZG8uMzM0NTIzMQogICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgPC9nPgogICAgPC9zdmc+" alt="DOI" /></a></p>
 <p>Kernel density plots are effective way to visualize the distribution of variable (in this case, time). Thus, kernel plots can be considered as plots of smoothed histograms.</p>
 <p>Here we’ll work with two <code>R</code> packages: <code>activity</code> and <code>overlap</code>. We also will load two sample time datasets along with the packages to perform the activty test.</p>
 <pre class="r"><code>#Loading required packages
@@ -422,7 +412,7 @@ plot(fitact_b, yunit=&quot;dens&quot;, las=1, dline=list(col=&quot;pink&quot;), 
 <p>Below we compare datasets X and Y, and test if they come or not from the same activity distribution:</p>
 <pre class="r"><code>compareCkern(fitact_a, fitact_b, reps = 100)</code></pre>
 <pre><code>##        obs       null     seNull      pNull 
-## 0.94528569 0.96223375 0.01172607 0.08000000</code></pre>
+## 0.94528569 0.96108573 0.01154511 0.10000000</code></pre>
 </div>
 <div id="overlap-assessment" class="section level2">
 <h2>Overlap assessment</h2>
@@ -462,9 +452,9 @@ legend(&quot;topright&quot;, inset = c(0,0), title = &quot;Data&quot;, c(&quot;X
 ## [1] activity_1.2  overlap_0.3.2
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_1.0.1      mvtnorm_1.0-11  digest_0.6.19   magrittr_1.5   
-##  [5] evaluate_0.14   pbapply_1.4-0   stringi_1.4.3   boot_1.3-22    
-##  [9] rmarkdown_1.13  tools_3.6.0     stringr_1.4.0   xfun_0.7       
+##  [1] Rcpp_1.0.1      mvtnorm_1.0-11  digest_0.6.20   magrittr_1.5   
+##  [5] evaluate_0.14   pbapply_1.4-1   stringi_1.4.3   boot_1.3-23    
+##  [9] rmarkdown_1.14  tools_3.6.0     stringr_1.4.0   xfun_0.8       
 ## [13] yaml_2.2.0      parallel_3.6.0  compiler_3.6.0  circular_0.4-93
 ## [17] htmltools_0.3.6 knitr_1.23</code></pre>
 </div>
@@ -904,6 +894,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

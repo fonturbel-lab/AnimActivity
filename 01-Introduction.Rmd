@@ -14,6 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 01 - Introduction
 
+[![DOI](https://zenodo.org/badge/193365640.svg)](https://zenodo.org/badge/latestdoi/193365640)
+
 **Animal activity** is a central issue on ecology, as it determines the outcome of ecological interactions, influeces community structure and also explains many auto-ecological processes. Ecological studies on animal activity rely on information sources such as telemetry (VHF, GPS or NFC among others) or camera traps. In the recent years, camera traps have been widely used in wildlife ecology studies as they provide high-quality data (if properly used, of course) with minimum observer interference, and are a cost-effective method to monitor large areas with little time investment.
 
 Processing activity data, however, can be bothersome and even frustrating without a prior knowledge about how to deal with this kind of data. By definition, activity data is circular (i.e., measured in time o angular units) and therefore cannot be analyzed using standard statistical procedures such as `anova` or `glm` that assume linear data. For example, in circular data the time difference between 1:15 and 1:45 h is the same than 23:55 and 0:25 h, but if we operate these differences as linear data the results would be quite different. In circular data the beginning and the end points are the same and thus we need a special framework to analyze these patterns.
