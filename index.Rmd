@@ -9,22 +9,22 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Animal Activity
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+[![DOI](https://zenodo.org/badge/193365640.svg)](https://zenodo.org/badge/latestdoi/193365640)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+This repository contains useful code and example data on how to study and test hypotheses on animal activity.
 
-```{r cars}
-summary(cars)
-```
+![Dromiciops picture](images/Dromiciops.jpg)
 
-## Including Plots
+Here we collected code from ongoing work at the lab (projects, dissertations, etc.) aiming to have a common source of analysis code to this purpose, free to use for anyone :smiley:
 
-You can also embed plots, for example:
+This repository has three parts (so far):
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+**01.- Introduction**. A brief introduction on animal activity (still under development, please be patience).
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+**02.- Circular statistics**. How to deal with time data using circular statistics, how to plot them and hypothesis-test.
+
+**03.- Kernel density estimators**. Kernel density functions derived from activity data, including plots and hypothesis testing.
+
+More coming soon...
