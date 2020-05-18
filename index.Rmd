@@ -28,11 +28,12 @@ This repository has three chapters (so far):
 
 [**01.- Introduction**](01-Introduction.html). A brief introduction on animal activity (still under development, please be patience).
 
-**02.- Circular statistics**. How to deal with time data using circular statistics, how to plot them and hypothesis-test.
+[**02.- Circular statistics**](02-Circular.html). How to deal with time data using circular statistics, how to plot them and hypothesis-test.
 
-**03.- Kernel density estimators**. Kernel density functions derived from activity data, including plots and hypothesis testing.
+[**03.- Kernel density estimators**](03-Kernel_Density.html). Kernel density functions derived from activity data, including plots and hypothesis testing.
 
-Please cite this material as:
+
+#### Please cite this material as:
 
 Fontúrbel, F.E. & H.J. Cuadra. 2019. Animal activity: a very simple guide. GitHub repository, doi: 10.5281/zenodo.3345231
 
