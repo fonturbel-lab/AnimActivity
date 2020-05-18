@@ -36,4 +36,3 @@ This repository has three chapters (so far):
 #### Please cite this material as:
 
 Fontúrbel, F.E. & H.J. Cuadra. 2019. Animal activity: a very simple guide. GitHub repository, doi: 10.5281/zenodo.3345231
-
