@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Animal Activity
+# Animal activity: a very simple guide
 
 [![DOI](https://zenodo.org/badge/193365640.svg)](https://zenodo.org/badge/latestdoi/193365640)
 
@@ -26,11 +26,13 @@ Here we collected code from ongoing work at the lab (projects, dissertations, et
 
 This repository has three chapters (so far):
 
-**01.- Introduction**. A brief introduction on animal activity (still under development, please be patience).
+[**01.- Introduction**](01-Introduction.html). A brief introduction on animal activity (still under development, please be patience).
 
 **02.- Circular statistics**. How to deal with time data using circular statistics, how to plot them and hypothesis-test.
 
 **03.- Kernel density estimators**. Kernel density functions derived from activity data, including plots and hypothesis testing.
 
-More coming soon...
+Please cite this material as:
+
+Fontúrbel, F.E. & H.J. Cuadra. 2019. Animal activity: a very simple guide. GitHub repository, doi: 10.5281/zenodo.3345231
 
