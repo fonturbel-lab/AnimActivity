@@ -2,7 +2,10 @@
 title: "index"
 author: "Francisco E. Fonturbel"
 date: "May/18/2020"
-output: html_document
+output: 
+  html_document:
+    includes:
+        after_body: footer.html
 ---
 
 ```{r setup, include=FALSE}
@@ -30,3 +33,4 @@ This repository has three parts (so far):
 **03.- Kernel density estimators**. Kernel density functions derived from activity data, including plots and hypothesis testing.
 
 More coming soon...
+
