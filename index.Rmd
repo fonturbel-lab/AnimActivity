@@ -33,6 +33,9 @@ This repository has three chapters (so far):
 [**03.- Kernel density estimators**](03-Kernel_Density.html). Kernel density functions derived from activity data, including plots and hypothesis testing.
 
 
+## [TOOGLE GITHUB VERSION](https://github.com/fonturbel-lab/AnimActivity)
+
+
 #### Please cite this material as:
 
 Fontúrbel, F.E. & H.J. Cuadra. 2019. Animal activity: a very simple guide. GitHub repository, doi: 10.5281/zenodo.3345231
