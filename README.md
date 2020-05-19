@@ -18,6 +18,8 @@ This repository has three parts (so far):
 
 More coming soon... :metal:
 
+[TOOGLE WEBSITE VERSION](https://fonturbel-lab.github.io/AnimActivity/)
+
 ## Terms of use
 
 This information is provided under a Creative Commons BY-SA license. Therefore, you may freely use this data catalogue, but you must (i) give the appropriate credit to the authors by citing this repository and its doi, and (ii) if you transform, remix, or build upon this data, the resulting dataset should be shared under the same license conditions.
