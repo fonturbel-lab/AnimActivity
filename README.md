@@ -18,7 +18,7 @@ This repository has three parts (so far):
 
 More coming soon... :metal:
 
-[TOOGLE WEBSITE VERSION](https://fonturbel-lab.github.io/AnimActivity/)
+### [TOGGLE TO WEBSITE VERSION](https://fonturbel-lab.github.io/AnimActivity/)
 
 ## Terms of use
 
