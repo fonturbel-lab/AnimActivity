@@ -17,3 +17,9 @@ This repository has three parts (so far):
 **03.- Kernel density estimators**. Kernel density functions derived from activity data, including plots and hypothesis testing.
 
 More coming soon... :metal:
+
+## Terms of use
+
+This information is provided under a Creative Commons BY-SA license. Therefore, you may freely use this data catalogue, but you must (i) give the appropriate credit to the authors by citing this repository and its doi, and (ii) if you transform, remix, or build upon this data, the resulting dataset should be shared under the same license conditions.
+
+![license](images/license.png)
