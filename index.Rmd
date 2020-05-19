@@ -33,7 +33,7 @@ This repository has three chapters (so far):
 [**03.- Kernel density estimators**](03-Kernel_Density.html). Kernel density functions derived from activity data, including plots and hypothesis testing.
 
 
-## [TOOGLE GITHUB VERSION](https://github.com/fonturbel-lab/AnimActivity)
+### [TOOGLE GITHUB VERSION](https://github.com/fonturbel-lab/AnimActivity)
 
 
 #### Please cite this material as:
