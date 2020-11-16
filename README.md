@@ -1,6 +1,6 @@
 # Animal Activity :bug:
 
-[![DOI](https://zenodo.org/badge/193365640.svg)](https://zenodo.org/badge/latestdoi/193365640) ![License](https://img.shields.io/badge/License-CC%20BY%2D-SA%204.0-lightgrey.svg)
+[![DOI](https://zenodo.org/badge/193365640.svg)](https://zenodo.org/badge/latestdoi/193365640) [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) ![License](https://img.shields.io/badge/License-CC%20BY%2D-SA%204.0-lightgrey.svg)
 
 This repository contains useful code and example data on how to study and test hypotheses on animal activity.
 
