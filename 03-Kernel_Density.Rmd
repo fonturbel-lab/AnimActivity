@@ -92,10 +92,10 @@ And now we will graph the Density Plots!
 
 ```{r densplot, echo=TRUE, eval=TRUE, fig.width=8}
 #Density plot for A
-densityPlot(act_a, xscale = 24, xcenter = c("noon", "midnight"), add = F, rug = T, extend = "lightgray", main = "Data X", xlab = "Time", ylab = "Density", bty = "L")
+densityPlot(act_a, xscale = 24, xcenter = c("noon", "midnight"), add = F, rug = T, extend = "lightgray", main = "Data A", xlab = "Time", ylab = "Density", bty = "L")
 
 #Density plot for B
-densityPlot(act_b, xscale = 24, xcenter = c("noon", "midnight"), add = F, rug = T, extend = "lightgray", main = "Data Y", xlab = "Time", ylab = "Density", bty = "L")
+densityPlot(act_b, xscale = 24, xcenter = c("noon", "midnight"), add = F, rug = T, extend = "lightgray", main = "Data B", xlab = "Time", ylab = "Density", bty = "L")
 ```
 
 And of course, we can plot the two datasets in same plot with `overlap`
