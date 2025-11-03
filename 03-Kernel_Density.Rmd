@@ -53,10 +53,10 @@ Now we will plot kernel density functions for our two datasets separately.
 
 ```{r denplot, echo=TRUE, eval=TRUE, fig.width=8}
 #Density plot for dataset A
-plot(fitact_a, yunit="dens", las=1, dline=list(col="lightblue"), tline=list(col="blue"), main="Data X", ylim=c(0,0.17))
+plot(fitact_a, yunit="dens", las=1, dline=list(col="lightblue"), tline=list(col="blue"), main="Data A", ylim=c(0,0.17))
 
 #Density plot for dataset B
-plot(fitact_b, yunit="dens", las=1, dline=list(col="pink"), tline=list(col="red"), main = "Data Y")
+plot(fitact_b, yunit="dens", las=1, dline=list(col="pink"), tline=list(col="red"), main = "Data B")
 ```
 
 And we also are able to depict both kernels in one plot:
@@ -64,7 +64,7 @@ And we also are able to depict both kernels in one plot:
 ```{r denpcomp, echo=TRUE, eval=TRUE, fig.width=8}
 plot(fitact_a, yunit="dens", las=1, dline=list(col="lightblue"), tline=list(col="blue"), ylim=c(0,0.17))
      plot(fitact_b, yunit="dens", add=TRUE, dline=list(col="pink"), tline=list(col="red"))
-     legend("topright", inset = c(0,0), title = "Data", c("X", "Y"), lty= c(1,1), col = c("lightblue", "pink"), bty = "n")
+     legend("topright", inset = c(0,0), title = "Data", c("A", "B"), lty= c(1,1), col = c("lightblue", "pink"), bty = "n")
 ```
 
 It is very nice, isn't it?
@@ -102,7 +102,7 @@ And of course, we can plot the two datasets in same plot with `overlap`
 
 ```{r dplotcomb, echo=TRUE, eval=TRUE, fig.width=8}
 overlapPlot(act_a, act_b, main = " ", linecol = c("black", "darkgreen"), lty = c(1,3), bty = "L", xlab = "Time", ylab = "Density")
-legend("topright", inset = c(0,0), title = "Data", c("X", "Y"), lty= c(1,3), col = c("gray25", "seagreen"), bty = "n")
+legend("topright", inset = c(0,0), title = "Data", c("A", "B"), lty= c(1,3), col = c("gray25", "seagreen"), bty = "n")
 ```
 
 ## Session
